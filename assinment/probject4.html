@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>probject 4</title>
+    <style>
+        #heading {
+            text-align: center;
+            margin: auto;
+            width: 60%;
+        }
+        #heading>h1 {
+            font-size: 40px;
+        }
+
+        #heading>p {
+            color: gray;
+            line-height: 13px;
+            margin-top: -20px;
+        }
+
+        .contaneir {
+            width: 100%;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+            flex-wrap: wrap;
+           
+        }
+
+        .contaneir>div {
+            width: 23%;
+            height: 100%;
+            margin: auto;
+            text-align: center;
+          
+            border-radius: 20px;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            
+
+        }
+
+        .contaneir>div>img:first-child {
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+        }
+        .contaneir>div>img:last-child {
+            width:100px;
+            display: block;
+            margin: auto;
+            margin-top: -20px;
+            transition: 1s;
+        }
+        /* imp */
+        .contaneir:hover>div{
+            z-index: 2;
+            filter:blur(3px);
+        }
+        .contaneir>div:hover{
+            transform :scale(1.1) ;
+            filter:blur(0px);
+
+        }
+
+        .contaneir>div>h3 {
+            font-size: 25 px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading">
+        <h1>Meet our mentor</h1>
+        <p>With extensive industry experience, the Masai Curriculum Team is a group of expert instructors.</p>
+    </div>
+    <!-- frist line -->
+    <div class="contaneir">
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Nrupul_d3fe3b289a.jpg" alt="Error">
+            <h3>Nrupul Dev</h3>
+
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_da_557255e025.jpeg" alt="">
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Yogesh_52e31f5560.jpg" alt="Error">
+            <h3>Yogesh Bhat</h3>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_mercuri_129d690457.svg" alt="">
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/aman_fbbc8625a4.jpg" alt="Error">
+            <h3>Aman Vats</h3>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_exl_ab21e9bfe0.png" alt="">
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Albert_28b73517f6.jpg" alt="Error">
+            <h3>Albert Sebstian</h3>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_realized_5d3fee2677.jpeg" alt="">
+        </div>
+    </div>
+    <!-- second line -->
+    <div class="contaneir">
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/lohit_dp_98abd5839c.jpeg "alt="Error">
+            <h3>Nrupul Dev</h3>
+
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_microsoft_80272817c6.png" alt="">
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ritesh_Firodiya_4_8a667ac9c8.jpg" alt="Error">
+            <h3>Yogesh Bhat</h3>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_swiggy_9ca86a3f78.svg" alt="">
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/swanand_d399feddf5.jpeg" alt="Error">
+            <h3>Aman Vats</h3>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/kalaam_f2ea778a36.png" alt="">
+        </div>
+        <div>
+            <!-- <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Albert_28b73517f6.jpg" alt="Error">
+            <h3>Albert Sebstian</h3>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_realized_5d3fee2677.jpeg" alt=""> -->
+        </div>
+    </div>
+</body>
+
+</html>

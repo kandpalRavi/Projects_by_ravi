@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>project7</title>
+    <style>
+        #bar {
+            display:flex;
+            width:100%;
+            height: 50px;
+            justify-content: space-evenly;
+            border: solid 1px red; 
+        }
+        #bar>div:first-child {
+            width: 10%;
+            height: 100%;
+            border: solid 1px teal;
+        }
+        #bar>div:last-child {
+            width: 70%;
+            height: 100%;
+            border: solid 1px teal;
+        } 
+        #bar>div {
+            /* text-transform: uppercase; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            justify-content: space-evenly;
+
+        }
+        p+div>p {
+            color: rgb(24, 134, 171);
+
+        }
+        select {
+            border: 0ch;
+        }
+        #bar>div+div:hover>p {
+            color: black;
+        }
+        #bar>div+div>p:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   <div id="bar">
+    <div>
+        <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="masai-school">
+    </div>
+    <div>
+        <select>
+            <option >course</option>
+            <option >data science</option>
+            <option >data science</option>
+        </select>
+        <p>hire from us</p>
+        <p>reffer and earn</p>
+        <p>fee and pap</p>
+        <p>event and contest</p>
+        <div>
+            <p>sholer program</p>
+        </div>
+        <button>Login</button>
+    </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>we_project_grid</title>
+    <style>
+        body {
+            background-color: #f7f7f9;
+        }
+        #contener {
+            width: 85%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 20px;
+        }
+
+        #contener>div {
+            border-radius: 10px;
+            background-color: white;
+        }
+        #contener>div>div {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        #contener>div>div>p {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        p+p {
+            color:#bd944b
+        }
+        div+p {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            margin-top: -10px;
+            color: #bcbdbd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contener">
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div> 
+            <div>
+            <p>Cappuino</p>
+            <p>$49</p>
+        </div>
+        <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p></div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor s Atque aliquid quasi alias perspiciatis.</p>
+        </div>
+    </div>
+</body>
+
+</html>

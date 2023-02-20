@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading {
+            text-align: center;
+            width: 30%;
+            margin:auto;
+        }
+        #heading>h1 {
+            font-size: 40px;
+        }
+        #heading>p {
+            text-align: center;
+             width:100%;
+            font-size: 17px;
+            line-height: 25px;
+            color: gray;
+            margin:auto;
+        }
+        #card-saction {
+            display: flex;
+            width: 70%;
+            height: 400px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #card-saction>div {
+            text-align: center;
+            width:30%;
+            height:90%;
+            margin: auto;
+        }
+        h2+h1+p {
+            font-style: italic;
+        }
+        p+p {
+            line-height: 20px;
+            font-size: 20px;
+            padding: 20px;
+        }
+        #card-saction>div:last-child >h1 {
+            color: blue;
+        }
+        #card-saction>div:first-child >h1 {
+            color: green;
+        }
+        #card-saction>div:nth-child(2) >h1 {
+            color: orange;
+        }
+        button {
+            border: solid 1px blue;
+            color: blue;
+            font-weight: bold;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="heading">
+        <h1>Choose a plan that is rigth for business</h1>
+        <p>We collect reviews from our users so you can get an honest opinion of an experience with our website are
+            relly like</p>
+    </div>
+    <!-- card saction -->
+    <div id="card-saction">
+        <!-- this saction should contain 3 children div,h2,h1,p,p,button -->
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of an experience with our website</p>
+            <button>Start Now</button>
+
+        </div>
+        <div> <h2>Starter Plan</h2>
+            <h1>$39</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of an experience with our website</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>$59</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of an experience with our website</p>
+            <button>Start Now</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

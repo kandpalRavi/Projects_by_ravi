@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meadia queries1</title>
+    <style>
+        #contener {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,400px);
+            gap: 20px;
+        }
+        #contener>div {
+            border: 1px solid teal;
+        }
+        @media all and (min-width:475px) and (max-width:650px){
+
+            #contener {
+                width: 100%;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(7,400px);
+            }
+        }
+        @media all and (min-width:330px) and (max-width:475px){
+            #contener {
+                width: 100%;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(10,400px);
+            }
+        }
+    </style>
+</head>
+<body>
+  <div id="contener">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>  
+</body>
+</html>
