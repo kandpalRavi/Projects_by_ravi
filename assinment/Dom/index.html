@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #value {
+            width: 50%;
+            font-size: 30px;
+           font-weight: bold;
+           color: black;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,0.3fr);
+            grid-template-rows: repeat(1,100px);
+            justify-content: space-around;
+            gap: 20px
+        }
+        #value>div {
+            border: 1px solid black;
+            display: grid;
+            text-align: center;
+            align-items: center;
+           
+        }
+        #value>div:nth-child(2){
+            background-color: #00aa01;
+        }
+        #value>div:nth-child(1){
+            background-color: red;
+        }
+        #score {
+            margin: auto;
+            margin-top: 40px;
+            width: 30%;
+            height: 100px;
+           background-color:#b3b3b3;
+           border: 2px solid black;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 27px;
+           font-weight: bold;
+           color: black;
+        }
+        #number {
+            margin: auto;
+            margin-top: 30px;
+            width: 30%;
+            display: grid;
+            grid-template-columns: repeat(3,0.4fr);
+            grid-template-rows: repeat(4,60px);
+            gap: 20px;
+        }
+        #number>div {
+            border: 1px solid black;
+            display: grid;
+            text-align: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #item {
+          grid-column-start:2;
+          grid-column-end:3;
+          background-color: #810065 ;
+          color: white;
+        }
+        #enter{
+            width: 30%;
+            margin: auto;
+            margin-top:30px;
+            display: grid;
+            text-align: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+        .green {
+            background-color: #668100;
+        }
+        .orange {
+            background-color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+<div id="value">
+    <div>43 
+    </div>
+    
+    <div>100</div>
+</div>
+ 
+<div id="score">  </div>
+<div id="number">
+    <div class="green">1</div>
+    <div class="orange">2</div>
+    <div class="green">3</div>
+    <div class="orange">4</div>
+    <div class="orange">5</div>
+    <div class="orange">6</div>
+    <div class="green">7</div>
+    <div class="orange">8</div>
+    <div class="green">9</div>
+    <div id="item">0</div>
+</div>
+<div id="enter">
+    <h1>Enter</h1>
+</div>
+</body>
+</html>
+<script>
+ let key= document.querySelectorAll("#number>div");
+ let x=document.querySelector("#score");
+
+ let bag="";
+ for(let i=0;i<key.length;i++){
+    key[i].addEventListener("click",myNumber);
+ }
+ function myNumber (event){
+    let targetNum=event.target.innerText;
+    bag= bag+targetNum;
+    console.log(bag);
+    x.innerText=bag;
+ }
+  let check =document.querySelector("#enter");
+  check.addEventListener("click",checkNum);
+  function checkNum(){
+    let a=+document.querySelector("#value>div:nth-child(1)").innerText;
+    let b=+document.querySelector("#value>div:nth-child(2)").innerText;
+    // console.log( typeof x.innerText);
+    if(Number(x.innerText)<a){
+        document.querySelector("#value>div:nth-child(1)").innerText=x.innerText;
+    }else if ( Number(x.innerText)>b ){
+        document.querySelector("#value>div:nth-child(2)").innerText=x.innerText;
+    }
+    document.querySelector("#score").innerText="";
+  }
+</script>
