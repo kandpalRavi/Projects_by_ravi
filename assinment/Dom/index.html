@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #hadding {
+            width: 50%;
+            margin: auto;
+            margin-bottom: -25px;
+            display: grid;
+            grid-template-columns: repeat(2,0.3fr);
+            grid-template-rows: repeat(1,100px);
+            justify-content: space-around;
+            gap: 20px
+        }
+        #hadding>h1 {
+            display: grid;
+            text-align: center;
+            align-items: center;   
+        }
         #value {
             width: 50%;
             font-size: 30px;
@@ -87,6 +102,10 @@
     </style>
 </head>
 <body>
+    <div id="hadding">
+        <h1>Min</h1>
+        <h1>max</h1>
+    </div>
 <div id="value">
     <div>43 
     </div>
@@ -137,6 +156,7 @@
     }else if ( Number(x.innerText)>b ){
         document.querySelector("#value>div:nth-child(2)").innerText=x.innerText;
     }
-    document.querySelector("#score").innerText="";
+    x.innerText="";
+    bag="";
   }
 </script>
