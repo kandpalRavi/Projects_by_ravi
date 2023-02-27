@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic localstorage</title>
+</head>
+<body>
+    <h1></h1>
+    <button>Increment</button>
+    <button>Decrement</button>
+    <button>setzero</button>
+</body>
+</html>
+<script>
+    let count=localStorage.getItem("counter")||0;
+
+    document.querySelector("h1").innerText=count;
+    document.querySelector("h1+button").addEventListener("click",incefun);
+    function incefun(){
+        count++
+        document.querySelector("h1").innerText=count;
+        localStorage.setItem("counter",count);
+    }
+    document.querySelector("h1+button+button").addEventListener("click",decfun);
+   
+    function decfun(){
+        count--;
+        document.querySelector("h1").innerText=count;
+        localStorage.setItem("counter",count);
+    }
+    document.querySelector("button+button+button").addEventListener("click",zerofun);
+
+    function zerofun(){
+        count=0;
+        document.querySelector("h1").innerText=count;
+        localStorage.setItem("counter",count);
+    }
+</script>
