@@ -1,0 +1,59 @@
+#form {
+    width: 30%;
+    border: 1px solid transparent;
+    box-shadow:  rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+}
+#title {
+/* margin: auto; */
+height: 23px;
+width: 70%;
+}
+#link {
+/* margin: auto; */
+margin-top: 10px;
+height: 23px;
+width: 70%;
+}
+#diffculty {
+/* margin: auto; */
+margin-top: 10px;
+height: 23px;
+width: 70%;
+}
+#submit{
+margin: auto;
+margin-top: 10px;
+height: 23px;
+width: 90%;
+margin-bottom: 10px;
+background-color:#0e4988  ;
+color: white;
+border-radius: 5px;
+border: 1px transparent;
+}
+
+table,td,th {
+border: 1px solid #ddd;
+text-align: left;
+}
+
+table {
+border-collapse: collapse;
+width: 70%;
+margin: auto;
+margin-top: 50px;
+}
+
+th,td {
+padding: 15px;
+}
+
+tr > th {
+background-color: rgb(68, 126, 192);
+color: white;
+}
