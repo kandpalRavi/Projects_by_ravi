@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+            margin: auto;
+            margin-top: 40px;
+            width: 30%;
+            border: 1px solid transparent;
+             box-shadow:  rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+
+        }
+        .same {
+            display: block;
+            margin: 10px auto 10px auto;
+            margin-top: 10px;
+            width: 70%;
+            height: 20px;
+        }
+        #submit{
+            height: 24px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            background-color: aqua;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter Your Name" id="Name" class="same">
+        <input type="text" placeholder="Enter Your age" id="age" class="same">
+        <select  id="gender" class="same" >
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+
+        </select>
+        <input type="email" placeholder="Enter Your Email" id="email" class="same">
+        <input type="number" placeholder="Enter Number" id="Number" class="same">
+        <input type="submit" value="submit" id="submit" class="same">
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myDetails);
+    let detailsArr =[];
+    function myDetails(){
+        event.preventDefault();
+        let detailsObj={
+            myName:document.querySelector("#Name").value,
+            myAge:document.querySelector("#age").value,
+            myGender:document.querySelector("#gender").value,
+            myEmail:document.querySelector("#email").value,
+            myNumber:document.querySelector("#Number").value,
+        }
+        detailsArr.push(detailsObj);
+         console.log(detailsArr);
+
+    }
+</script>
