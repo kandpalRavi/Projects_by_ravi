@@ -1,5 +1,6 @@
 document.querySelector("form").addEventListener("submit",myDSA);
-let qusArr=[];
+let qusArr= JSON.parse(localStorage.getItem("qusData"))||[];
+window.addEventListener("load",displayTable(qusArr));
 function myDSA (event){
     event.preventDefault();
     let qusObj={
@@ -10,6 +11,7 @@ function myDSA (event){
     // console.log(qusObj);
     qusArr.push(qusObj);
   displayTable(qusArr);
+  localStorage.setItem("qusData",JSON.stringify(qusArr));
 }
 function displayTable(qusarr){
     document.querySelector("tbody").innerHTML="";
