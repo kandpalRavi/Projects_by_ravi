@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +8,60 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <div id="contener">
         <h1>sign-up</h1>
         <form id="form">
             <p>Full Name</p>
-            <input type="text" placeholder="Enter Full Name" id="name" class="input-box"> 
+            <input type="text" placeholder="Enter Full Name" id="name" class="input-box">
             <p>Phone Number or Email Address</p>
             <input type="text" placeholder="Enter phone number or email number" id="email" class="input-box">
             <p>password</p>
             <input type="password" id="password" placeholder="password" class="input-box">
-            <input type="submit" value="Continue" id="submit" >
+            <input type="submit" value="Continue" id="submit">
             <hr>
             <p id="or">OR</p>
-            <button type="button" id="btn"  > login with Google</button>
+            <button type="button" id="btn"> login with Google</button>
             <p id="term">Do you have an account ? <a href="">sign-in</a></p>
         </form>
     </div>
-   
+
 </body>
+
 </html>
 <script>
-    document.querySelector("form").addEventListener("submit",personData);
-    let dataArr=[];
-    function personData(Event){
+    document.querySelector("form").addEventListener("submit", personData);
+    let dataArr = [];
+    function personData(Event) {
         Event.preventDefault();
-        let dataObj={
+        let dataObj = {
             personName: document.querySelector("#name").value,
             personEmail: document.querySelector("#email").value,
             personPassword: document.querySelector("#password").value
         };
-        if(dataObj.personEmail!=""&&dataObj.personName!=""&&dataObj.personPassword!=""){
-           document.location.href="login.html"
-           dataArr.push(dataObj);
-        }else{
-            if(dataObj.personEmail==""&&dataObj.personPassword==""&&dataObj.personName==""){
-                document.querySelector("#email").style.border="2px solid red";
-                document.querySelector("#password").style.border="2px solid red";
-                document.querySelector("#name").style.border="2px solid red";
+        if (dataObj.personEmail != "" && dataObj.personName != "" && dataObj.personPassword != "") {
+            document.location.href = "login.html"
+            dataArr.push(dataObj);
+        } else {
+            if (dataObj.personEmail == "" && dataObj.personPassword == "" && dataObj.personName == "") {
+                document.querySelector("#email").style.border = "2px solid red";
+                document.querySelector("#password").style.border = "2px solid red";
+                document.querySelector("#name").style.border = "2px solid red";
             }
-            else if(dataObj.personName==""){
-                document.querySelector("#name").style.border="2px solid red";
+            else if (dataObj.personName == "") {
+                document.querySelector("#name").style.border = "2px solid red";
             }
-            else if(dataObj.personEmail==""){
-                document.querySelector("#email").style.border="2px solid red";
+            else if (dataObj.personEmail == "") {
+                document.querySelector("#email").style.border = "2px solid red";
             }
-            else{
-                document.querySelector("#password").style.border="2px solid red";
+            else {
+                document.querySelector("#password").style.border = "2px solid red";
             }
         }
         dataArr.push(dataObj);
         console.log(dataArr)
-        localStorage.setItem("signupData",JSON.stringify(dataArr));
+        localStorage.setItem("signupData", JSON.stringify(dataArr));
     }
+
 </script>

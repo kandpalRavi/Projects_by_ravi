@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <h1>Log-in</h1>
     <div id="contener">
@@ -15,26 +17,27 @@
             <input type="text" placeholder="Enter phone number or email number" id="email" class="input-box">
             <p>password</p>
             <input type="password" id="password" placeholder="password" class="input-box">
-            <input type="submit" value="Continue" id="submit" >
+            <input type="submit" value="Continue" id="submit">
             <p id="term">Do you have an account ? <a href="signup_page.html">sign-in</a></p>
         </form>
     </div>
-   
+
 </body>
+
 </html>
 <script>
-    document.querySelector("form").addEventListener("submit",checkdata);
-    let personDataLS=JSON.parse(localStorage.getItem("signupData"))
-    function checkdata(event){
+    document.querySelector("form").addEventListener("submit", checkdata);
+    let personDataLS = JSON.parse(localStorage.getItem("signupData"))
+    function checkdata(event) {
         event.preventDefault();
-        let newData ={
-            email:document.querySelector("#email").value,
-            password:document.querySelector("#password").value
+        let newData = {
+            email: document.querySelector("#email").value,
+            password: document.querySelector("#password").value
         }
-        personDataLS.forEach(function(elem){
-            if(newData.email==elem.personEmail&&newData.password==elem.personPassword){
-                document.location.href="newpage.html";
-            }else{
+        personDataLS.forEach(function (elem) {
+            if (newData.email == elem.personEmail && newData.password == elem.personPassword) {
+                document.location.href = "newpage.html";
+            } else {
                 alert("email or password does not match");
             }
         })

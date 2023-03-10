@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admitted</title>
-    <link rel="stylesheet" href="commonStyles.css" />
-  </head>
 
-  <body>
-    <div id="links">
-      <div><a href="index.html">Home</a></div>
-      <div><a href="applied.html">Applied Jobs</a></div>
-      <div><a href="bookmark.html">Bookmarks</a></div>
-    </div>
-    <main>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Job Applied</th>
-          </tr>
-        </thead>
-        <tbody id="body"></tbody>
-      </table>
-    </main>
-  </body>
-  <script>
-    //you need to code here
-    let boodmarkDataLs=JSON.parse(localStorage.getItem("boodmarkData"));
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admitted</title>
+  <link rel="stylesheet" href="commonStyles.css" />
+</head>
 
-    boodmarkDataLs.forEach(elem => {
-      document.querySelector("tbody").innerHTML=`<tr><td>${elem.personName}</td><td>${elem.personEmail}</td><td>${elem.personRole}</td></tr>`
+<body>
+  <div id="links">
+    <div><a href="index.html">Home</a></div>
+    <div><a href="applied.html">Applied Jobs</a></div>
+    <div><a href="bookmark.html">Bookmarks</a></div>
+  </div>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job Applied</th>
+          <th>Delete bookmark</th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+  </main>
+</body>
+<script>
+  //you need to code here
+  let boodmarkDataLs = JSON.parse(localStorage.getItem("boodmarkData"));
+
+  displayTable(boodmarkDataLs)
+
+  function displayTable(boodmarkDataLs) {
+    document.querySelector("tbody").innerHTML = "";//we have to remove tbody in order to work delete funtion properly
+
+    boodmarkDataLs.forEach(function (elem, index) {
+      let tr = document.createElement("tr");
+
+      let td1 = document.createElement("td");
+      td1.innerText = elem.personName;
+      let td2 = document.createElement("td");
+
+      td2.innerText = elem.personEmail;
+
+
+      let td3 = document.createElement("td");
+
+      td3.innerText = elem.personRole;
+
+      let td4 = document.createElement("td");
+
+      td4.innerText = "Delete";
+      td4.style.backgroundColor = "red";
+
+      td4.addEventListener("click", function () {
+        deleteData(index);
+      })
+
+      tr.append(td1, td2, td3, td4);
+      document.querySelector("tbody").append(tr);
     });
-  </script>
+  }
+
+
+  function deleteData(index) {
+    boodmarkDataLs.splice(index, 1);
+    localStorage.setItem("boodmarkData", JSON.stringify(boodmarkDataLs));
+    // window.location.reload(); or 2nd way
+    displayTable(boodmarkDataLs)
+  }
+
+
+</script>
+
 </html>
