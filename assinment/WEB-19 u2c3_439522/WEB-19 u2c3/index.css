@@ -1,20 +1,67 @@
 /* Fill CSS here */
+h1{
+    text-align: center;
+    color: #0467aa;
+}
 h1+div{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     border: 1px solid black;
 }
 form{
-    margin: auto;
-    width: 27%;
-    border: 1px solid red;
+    /* margin: auto; */
+    width: 23%;
+    border: 1px solid transparent ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
 }
 label{
     font-weight: bold;
 }
 input{
-    width: 95%;
-    margin-bottom: 4px;
+    width: 96%;
+    margin-bottom: 9px;
+    height: 27px;
+    border: 1px solid #e1e3e6;
+    outline: 0;
+    border-radius: 6px;
+}
+#submit{
+    width: 98%;
+    margin-top: 5px;
+    background-color:#0467aa;
+    color: white;
+}
+#department{
+    width: 98%;
+    height: 27px;
+    margin-bottom:9px ;
+    border: 1px solid #e1e3e6;
+    outline: 0;
+    border-radius: 6px;
+}
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  /* margin: auto; */
+
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+tr > th {
+  background-color:#0467aa;
+  color: white;
 }
