@@ -8,7 +8,7 @@ h1+div{
     margin: auto;
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 form{
     /* margin: auto; */
@@ -52,7 +52,8 @@ th {
 table {
   border-collapse: collapse;
   width: 70%;
-  /* margin: auto; */
+  margin: auto;
+  margin-top: -0%;
 
 }
 
