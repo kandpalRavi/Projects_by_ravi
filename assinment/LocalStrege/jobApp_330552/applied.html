@@ -87,7 +87,8 @@
     arrFormLS.splice(index, 1);
     localStorage.setItem("jobData", JSON.stringify(arrFormLS));
     localStorage.setItem("boodmarkData", JSON.stringify(bookmarkArr));
-    window.location.reload();
+    // window.location.reload();
+    displayTable(arrFormLS);
   }
   // function deleteData (inde)
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    let amarObj = {
+        name: 'Amar',
+        skill: 'singing',
+        work: 'goa',
+        sing: function (n) {
+            console.log(`${this.name} is good singer.`);
+        }
+    }
+    let akbarObj = {
+        name: 'Akbar',
+        skill: "chef",
+        work: "mumbai",
+        cooking: function (n) {
+            console.log(`${this.name} is known for his delicious food.`);
+        }
+    }
+    let anthonyObj = {
+        name: "Anthony",
+        sill: "Magician",
+        work: "Kashmir",
+        magic: function (n) {
+            console.log(`${this.name} is well known magician. `);
+        }
+    }
+
+
+    anthonyObj.magic.call(akbarObj);
+</script>

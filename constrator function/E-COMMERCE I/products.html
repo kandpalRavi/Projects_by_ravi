@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(248, 246, 246);
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+
+        tr>th {
+            background-color: teal;
+            color: white;
+        }
+
+        tbody>tr>td:last-child {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        tbody>tr>td:nth-child(6) {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #counter {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<main>
+    <div id="counter">Total Products: 0</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>category</th>
+                <th>image URL</th>
+                <th>price</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+            <!-- append here -->
+        </tbody>
+    </table>
+    <div><a href="admin.html">form</a></div>
+</main>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let arrFormLS = JSON.parse(localStorage.getItem("Pro_Data"));
+    // console.log(arrFormLS);
+    displayTable(arrFormLS);
+
+
+    function displayTable(arrFormLS) {
+        document.querySelector("tbody").innerHTML = "";
+        let counter = 0;
+
+        //loop for every element
+        arrFormLS.forEach(function (elem, index) {
+            let tr = document.createElement("tr");
+
+            let td1 = document.createElement("td");
+
+            td1.innerText = elem.name;
+
+            let td2 = document.createElement("td");
+
+            td2.innerText = elem.category;
+
+
+            let td3 = document.createElement("td");
+
+            td3.innerText = elem.img_url;
+
+            let td4 = document.createElement("td");
+
+            td4.innerText = elem.price;
+
+            let td5 = document.createElement("td");
+
+            td5.innerText = elem.gender;
+
+            let td6 = document.createElement("td");
+
+            td6.innerText = elem.sold;
+            td6.innerText = "Sold";
+            td6.setAttribute("class", "sold");
+            //changing sold td color
+            td6.addEventListener("click", function () {
+                if (elem.sold == 1) {
+                    td6.textContent = 'is Sold';
+                    td6.style.backgroundColor = 'red';
+                    td6.style.color = 'white';
+
+                } else {
+                    td6.textContent = 'Not Sold';
+                    td6.style.backgroundColor = 'green';
+                    td6.style.color = 'white';
+
+                }
+            });
+
+
+            let td7 = document.createElement("td");
+
+            td7.innerText = "remove";
+            td7.addEventListener("click", function () {
+                deleteData(elem);
+                // deleteData(index);
+            })
+            tr.append(td1, td2, td3, td4, td5, td6, td7);
+            document.querySelector("tbody").append(tr);
+            counter++;
+        })
+        updateCounter(counter);
+    }
+    function updateCounter(count) {
+        document.querySelector("#counter").innerText = `Total Products:${count}`;
+    }
+
+    function deleteData(elem, index) {
+        arrFormLS.splice(index, 1);
+        localStorage.setItem("Pro_Data", JSON.stringify(arrFormLS));
+        displayTable(arrFormLS);
+    }
+
+
+</script>
