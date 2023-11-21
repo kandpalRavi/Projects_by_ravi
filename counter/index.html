@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Counter :-</h1>
+    <h2 id="count"></h2>
+    <input type="text" id="text" placeholder="start typing ...">
+</body>
+
+</html>
+<script>
+    lat = name = 'ravindra';
+    function counter() {
+        let text = document.querySelector("#text");
+        let count = 0;
+        let id = setInterval(function () {
+            if (text.value == name) {
+                alert("jit gya ");
+                clearInterval(id);
+            }
+            if (count == 8) {
+                text.disabled = true;
+                alert("and time up..");
+                clearInterval(id);
+            }
+            let h2 = document.querySelector("#count");
+            h2.innerText = count;
+            count++;
+
+        }, 1000);
+    }
+    counter();
+</script>
