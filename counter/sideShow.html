@@ -43,9 +43,9 @@
             }
             console.log(i);
             let imge = document.createElement("img");
-            imge.scr = images[i];
+            imge.src = images[i];
             countainer.innerHTML = null;
-            countainer.append(images[i]);
+            countainer.append(imge);
             i++;
         }, 2000);
     }
