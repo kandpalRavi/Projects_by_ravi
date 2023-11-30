@@ -1,0 +1,33 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+#divcon {
+    width: 27%;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid red;
+    display: grid;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+input{
+    width: 85%;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+select{
+    width: 85%;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+#submit{
+    width: 65%;
+    margin-bottom: 15px;
+}

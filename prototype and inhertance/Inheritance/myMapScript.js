@@ -24,7 +24,7 @@ Array.prototype.myMap =function(fun){
         let element = arr[i];
         // when we calling map().we call it like this arr.map(fun(x){condition}) 
         // so the value of x is arr[i]
-        let x = fun(element);
+        let x = fun(element);//complete the condition that is given
 
         newArr.push(x);
     }

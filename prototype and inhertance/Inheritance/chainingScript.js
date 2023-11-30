@@ -105,3 +105,5 @@ arr7= arr1.myMap(function(num){
 });
 
 console.log('arr7 :-',arr7);
+
+//it's working successfully yeay...
